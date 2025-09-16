@@ -27,3 +27,7 @@ footer{
 main{
     padding: 20px 0;
 }
+
+.bold {
+    font-weight: bold;
+}
