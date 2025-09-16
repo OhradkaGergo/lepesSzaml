@@ -31,3 +31,8 @@ main{
 .bold {
     font-weight: bold;
 }
+
+#chart{
+    width: 100%;
+    height: 450px;
+}

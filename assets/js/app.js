@@ -64,10 +64,19 @@ async function render(view) {
     main.innerHTML = await (await fetch(`views/${view}.html`)).text();
 
     switch (view) {
+        case "mprofile": {
+            getProfile();
+            break;
+        }
         case "main": {
             setDate();
             await getSteps();
             renderSteps();
+            break;
+        }
+        case "statistics": {
+            await getChartData();
+            initChart();
             break;
         }
     }
