@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lépésszámláló App</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/stepcounter.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="Title"></h1>
+            <span id="themeSwitch">
+                <i class="bi bi-sun-fill" id="lightmodeBtn"></i>
+                <i class="bi bi-moon-fill" id="darkmodeBtn"></i>
+            </span>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Menü</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav" id="mainMenu">
+                        <a class="nav-link" href="#" onclick="render('login')">Belépés</a>
+                        <a class="nav-link" href="#" onclick="render('registration')">Regisztráció</a>
+                    </div>
+
+                    <div class="navbar-nav" id="userMenu">
+                        <a class="nav-link" href="#" onclick="render('main')">Lépésadatok kezelése</a>
+                        <a class="nav-link" href="#" onclick="render('statistics')">Statisztika</a>
+                        <a class="nav-link" href="#" onclick="LoadComponent('profile')">Profil</a>
+                        <a class="nav-link" href="#" onclick="logout()">Kilépés</a>
+
+
+                    </div>
+                </div>
+        </nav>
+
+
+
+
+        <main>
+            <!--Aktuális tartalom-->
+
+        </main>
+
+
+
+        <footer>
+            <p id="Company"></p>
+            <p id="Author"></p>
+            <p>2025.</p>
+        </footer>
+    </div>
+
+
+    <!--Assets-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <!--Controllers-->
+    <script src="controllers/userCtrl.js"></script>
+    <script src="controllers/messageCtrl.js"></script>
+    <script src="controllers/stepCtrl.js"></script>
+</body>
+
+</html>

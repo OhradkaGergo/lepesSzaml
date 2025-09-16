@@ -1,0 +1,44 @@
+<h3>Lépésadatok kezelése</h3>
+<hr>
+<div id="liveAlertPlaceholder"></div>
+
+<!--form-->
+
+<div class="row">
+
+    <div class="form-floating mb-3 col-12 col-lg-4">
+        <input type="date" class="form-control" id="dateField" placeholder="" max="">
+        <label for="dateField">Dátum</label>
+    </div>
+
+    <div class="form-floating mb-3 col-12 col-lg-4">
+        <input type="number" class="form-control" id="stepcountField" placeholder="" min="0">
+        <label for="stepField">Lépésszám</label>
+    </div>
+    <div class="col-12 col-lg-4 mb-3">
+        <button class="btn btn-primary" onclick="add()" id="addBtn">Hozzáadás</button>
+        <button class="btn btn-warning hide" onclick="update()" id="updateBtn">Módosítás</button>
+        <button class="btn btn-danger hide" onclick="del()" id="delBtn">Törlés</button>
+        <button class="btn btn-secondary hide" onclick="cancel()" id="cancelBtn">Mégsem</button>
+    </div>
+</div>
+
+<!--table -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-start">Dátum</th>
+            <th class="text-end">Lépésszám</th>
+            <th class="text-end">Műveletek</th>
+        </tr>
+    </thead>
+        
+    <tbody>
+        <!--lépésadatok dyn.-->
+    </tbody>
+    <tfoot>
+        <td colspan="4" class="text-center">Összesen: <span>0</span> lépés</td>
+    </tfoot>
+</table>
