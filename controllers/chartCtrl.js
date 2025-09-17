@@ -3,8 +3,21 @@ let chartLabels = [];
 let chartData = [];
 
 async function getChartData() {
-    //lekérdezi a backendtől a user lépésadatait
-    //majd feltölti a labels[] és data[] tömböket
+    try {
+        let res = await fetch(`${ServerURL}/steps/user/${loggedUser.id}`)
+        steps = await res.json();
+        steps = steps.sort((a, b) => new Date(a.date) - new Date(b.date));
+        chartLabels = [];
+        chartData = [];
+        steps.forEach(step => {
+            chartLabels.push(step.date);
+            chartData.push(step.stepcount);
+        }
+        )
+    } catch (err) {
+        console.log(err);
+        Alerts("Hiba az adatok lekérése során!", 'danger');
+    }
 }
 
 function initChart() {
@@ -29,6 +42,11 @@ function initChart() {
                 title: {
                     display: true,
                     text: 'Lépésszámok'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
                 }
             }
         },       

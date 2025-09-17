@@ -37,6 +37,7 @@
                     <div class="navbar-nav" id="userMenu">
                         <a class="nav-link" href="#" onclick="render('main')">Lépésadatok kezelése</a>
                         <a class="nav-link" href="#" onclick="render('statistics')">Statisztika</a>
+                        <a class="nav-link" href="#" onclick="render('calendar')">Naptár</a>
                         <a class="nav-link" href="#" onclick="LoadComponent('profile')">Profil</a>
                         <a class="nav-link" href="#" onclick="logout()">Kilépés</a>
 
@@ -66,12 +67,16 @@
     <!--Assets-->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js'></script>
+
     <script src="assets/js/app.js"></script>
+
     <!--Controllers-->
     <script src="controllers/userCtrl.js"></script>
     <script src="controllers/messageCtrl.js"></script>
     <script src="controllers/stepCtrl.js"></script>
     <script src="controllers/chartCtrl.js"></script>
+    <script src="controllers/calendarCtrl.js"></script>
 </body>
 
 </html>

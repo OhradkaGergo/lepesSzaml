@@ -64,7 +64,7 @@ async function render(view) {
     main.innerHTML = await (await fetch(`views/${view}.html`)).text();
 
     switch (view) {
-        case "mprofile": {
+        case "myprofile": {
             getProfile();
             break;
         }
@@ -77,6 +77,11 @@ async function render(view) {
         case "statistics": {
             await getChartData();
             initChart();
+            break;
+        }
+        case "calendar": {
+            await getCalendarData();
+            initCalendar();
             break;
         }
     }
